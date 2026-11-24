@@ -17,7 +17,7 @@ Base de datos de un gimnasio de barrio (caso real): socios, planes, cuotas, pers
 
 ## Modelo
 
-5 entidades (GIMNASIO, SOCIO, PLAN, CUOTA, PERSONAL), 5 relaciones (una N:M, PERSONAL–SOCIO) y 8 tablas en 3FN: GIMNASIO, SOCIO, PLAN, CUOTA, PERSONAL, PERSONAL_ROL, PLAN_RUTINA y ATENCION.
+5 entidades (GIMNASIO, SOCIO, PLAN, CUOTA, PERSONAL), 4 relaciones y 7 tablas en 3FN: GIMNASIO, SOCIO, PLAN, CUOTA, PERSONAL, PERSONAL_ROL y PLAN_RUTINA.
 
 ## Cómo ejecutar los scripts
 
@@ -31,4 +31,4 @@ sqlite3 gimnasio.db < 04-consultas.sql
 sqlite3 gimnasio.db < 05-pruebas-integridad.sql
 ```
 
-Los scripts 01 a 04 corren sin errores. El 05 falla a propósito: son 9 pruebas de integridad y cada una muestra el error esperado.
+Los scripts 01 a 04 corren sin errores. El 05 falla a propósito: son 8 pruebas de integridad y cada una muestra el error esperado.

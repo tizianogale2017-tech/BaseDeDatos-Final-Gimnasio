@@ -1,7 +1,7 @@
 -- ============================================================
 -- Trabajo integrador - Base de Datos I
 -- Caso: gimnasio de barrio (socios, planes y cuotas)
--- Script 04: consultas (11 esenciales y 5 complejas)
+-- Script 04: consultas (10 esenciales y 5 complejas)
 -- Ejecutar después de 01, 02 y 03
 -- ============================================================
 
@@ -65,13 +65,6 @@ SELECT id_gimnasio, mancuernas, discos
 SELECT id_plan, cant_dias, horario
   FROM PLAN
  WHERE objetivo IS NULL;
-
--- E11. ¿Qué socios atiende cada empleado? (relación N:M: se pasa por la tabla ATENCION)
-SELECT pe.apellido AS empleado, s.apellido AS socio, s.nombre
-  FROM ATENCION a
-  JOIN PERSONAL pe ON pe.id_personal = a.id_personal
-  JOIN SOCIO s     ON s.id_socio = a.id_socio
- ORDER BY pe.apellido, s.apellido;
 
 -- ------------------------------------------------------------
 -- CONSULTAS COMPLEJAS

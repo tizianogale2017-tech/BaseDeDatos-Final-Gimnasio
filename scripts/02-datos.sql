@@ -36,15 +36,6 @@ INSERT INTO PERSONAL_ROL (id_personal_rol, rol, id_personal) VALUES (4, 'Entrena
 INSERT INTO PERSONAL_ROL (id_personal_rol, rol, id_personal) VALUES (5, 'Mantenimiento', 5);
 INSERT INTO PERSONAL_ROL (id_personal_rol, rol, id_personal) VALUES (6, 'Entrenador personal', 3);
 
--- ATENCION (cada empleado atiende socios de su mismo local)
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio) VALUES (1, 1, 1);
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio) VALUES (2, 1, 2);
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio) VALUES (3, 1, 4);
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio) VALUES (4, 2, 2);
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio) VALUES (5, 2, 4);
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio) VALUES (6, 3, 3);
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio) VALUES (7, 4, 5);
-
 -- PLAN
 INSERT INTO PLAN (id_plan, cant_dias, descuento, horario, objetivo, id_socio) VALUES (1, 2, 0, '18:00 a 19:00', 'Ganar masa muscular', 1);
 INSERT INTO PLAN (id_plan, cant_dias, descuento, horario, objetivo, id_socio) VALUES (2, 1, 10, '07:00 a 08:00', 'Bajar de peso', 2);

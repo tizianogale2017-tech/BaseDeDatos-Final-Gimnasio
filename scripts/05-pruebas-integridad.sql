@@ -47,8 +47,3 @@ VALUES (60, 'Efectivo', 30000, '2026-12-10', 0, NULL, 1);
 -- Error esperado: UNIQUE constraint failed: PERSONAL_ROL.id_personal, PERSONAL_ROL.rol
 INSERT INTO PERSONAL_ROL (id_personal_rol, rol, id_personal)
 VALUES (60, 'Recepcionista', 3);
-
--- P9. Un par empleado-socio repetido en la relación N:M.
--- Error esperado: UNIQUE constraint failed: ATENCION.id_personal, ATENCION.id_socio
-INSERT INTO ATENCION (id_atencion, id_personal, id_socio)
-VALUES (60, 1, 1);

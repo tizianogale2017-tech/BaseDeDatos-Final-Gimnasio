@@ -11,7 +11,6 @@ PRAGMA foreign_keys = ON;
 -- Se borran las tablas en orden inverso a sus dependencias,
 -- para poder volver a ejecutar el script desde cero.
 DROP TABLE IF EXISTS CUOTA;
-DROP TABLE IF EXISTS ATENCION;
 DROP TABLE IF EXISTS PLAN_RUTINA;
 DROP TABLE IF EXISTS PLAN;
 DROP TABLE IF EXISTS PERSONAL_ROL;
@@ -75,24 +74,6 @@ CREATE TABLE PERSONAL_ROL (
     FOREIGN KEY (id_personal) REFERENCES PERSONAL (id_personal)
         ON DELETE CASCADE ON UPDATE CASCADE,
     UNIQUE (id_personal, rol)
-);
-
--- ------------------------------------------------------------
--- ATENCION: tabla intermedia que resuelve la relación N:M ATIENDE
--- entre PERSONAL y SOCIO. Cada fila es un par empleado-socio.
--- Un empleado atiende a varios socios y un socio puede ser atendido por varios empleados.
--- UNIQUE evita repetir el mismo par.
--- ON DELETE CASCADE: la atención no tiene sentido sin el empleado o sin el socio.
--- ------------------------------------------------------------
-CREATE TABLE ATENCION (
-    id_atencion INTEGER PRIMARY KEY,
-    id_personal INTEGER NOT NULL,
-    id_socio    INTEGER NOT NULL,
-    FOREIGN KEY (id_personal) REFERENCES PERSONAL (id_personal)
-        ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (id_socio) REFERENCES SOCIO (id_socio)
-        ON DELETE CASCADE ON UPDATE CASCADE,
-    UNIQUE (id_personal, id_socio)
 );
 
 -- ------------------------------------------------------------
