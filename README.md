@@ -4,7 +4,7 @@ Universidad Champagnat · Analista Programador Universitario · Base de Datos I 
 
 Autores: Tiziano Galetto y Teo Contreras
 
-Base de datos de un gimnasio de barrio (caso real): socios, planes, cuotas, personal y las atenciones que da cada empleado. Gestor: SQLite 3.46.1.
+Base de datos de un gimnasio de barrio (caso real): socios, planes, cuotas y personal. Gestor: SQLite 3.46.1.
 
 ## Contenido
 
